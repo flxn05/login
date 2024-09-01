@@ -19,7 +19,8 @@
 }
 
 body {
-  background-image: linear-gradient(45deg, #62107e, #251e3e);
+  background-color: #11001b;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,15 +33,15 @@ main {
   max-height: 80vh;
   max-width: 80vw;
   border-radius: 18px;
-  background-image: linear-gradient(45deg, rgba(212, 0, 255, 0.418), rgba(212, 0, 255, 0.089));
-  box-shadow: rgba(0, 0, 0, 0.5) 12px 24px 44px;
+  padding: 45px;
+  background-color: #11001b;
+  border: solid #5c0091a8 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  animation: start-main 1s .2s both ease-in-out;
 }
 
 form {
@@ -62,13 +63,11 @@ header {
 }
 #logo-big {
   max-height: 5vh;
-  animation: start-img .45s .75s ease-in-out both;
 }
 #headline {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 3rem;
-  animation: start-headline 1s .2s ease-in-out both;
 }
 #error {
   color: lightgray;
@@ -87,7 +86,6 @@ header {
   justify-content: center;
   background-color: #181818;
   font-family: Arial, Helvetica, sans-serif;
-  animation: start-footer 1.5s 1s cubic-bezier(.36,1.08,.64,.89) both;
 }
 #footer div {
   margin-left: 24px;
@@ -120,12 +118,6 @@ header {
 #password:focus {
   outline: none;
 }
-#username:hover,
-#password:hover {
-  animation: login-button-hover .75s ease-in-out;
-}
-
-
 #username::placeholder,
 #password::placeholder {
   color: lightgray;
@@ -137,45 +129,6 @@ header {
   font-size: 1.1rem;
   cursor: pointer;
 }
-#login_button:hover {
-  animation: login-button-hover .75s ease-in-out;
-}
-
-
-/*ANIMATIONS*/
-/*ANIMATIONS*/
-/*ANIMATIONS*/
-
-/* :f trans-un/pw */      /* DONE */
-/* start 3d-main */
-/* :f traSca-login */     /* DONE */
-
-
-@keyframes login-button-hover {
-  0% {translate: 0 0;}
-  50% {translate: 0 -6px;}
-  100% {translate: 0 0;}
-}
-
-
-@keyframes start-main {
-  0% {box-shadow: none; translate: 12px 24px;}
-}
-
-@keyframes start-headline {
-  0% {translate: 0 48px; opacity: 0;}
-}
-
-
-@keyframes start-img {
-  0% {opacity: 0;}
-}
-
-@keyframes start-footer {
-  0% {translate: 0 50px;}
-}
-
-
     </style>
 </head>
 <body>
@@ -188,7 +141,7 @@ header {
   
     <main>
       <div class="login">Login</div>
-        <div id="error">Hey, wrong password or username!</div>
+        <div id="error"></div>
         <form id="login_form">
             <input type="text" name="username" id="username" placeholder="username ....">
             <input type="password" name="password" id="password" placeholder="password ....">
